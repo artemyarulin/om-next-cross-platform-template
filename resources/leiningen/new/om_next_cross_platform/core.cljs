@@ -1,4 +1,4 @@
-(ns app.core
+(ns {{name}}.core
   (:require [om.next :as om :refer-macros [defui]]
             [om.dom :as dom]
             [ktoa.core :as ktoa :refer [view text text-input]]))

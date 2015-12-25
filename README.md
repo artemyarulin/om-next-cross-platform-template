@@ -26,3 +26,15 @@ Ready for testing
 ### Demo
 
 ![Editing native and mobile](om-next-cross-platform-demo.gif)
+
+
+### Usage
+
+``` bash
+name="app-name"
+npm install -g react-native-cli
+mkdir $name && cd name
+react-native init $name
+lein new om-next-cross-platform $name
+lein cljsbuild once repl && lein repl # Run RN application
+```
