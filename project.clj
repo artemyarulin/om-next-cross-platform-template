@@ -1,6 +1,6 @@
-(defproject om-next-cross-platform/lein-template "0.1.0-SNAPSHOT"
-  :description "FIXME: write description"
-  :url "http://example.com/FIXME"
-  :license {:name "Eclipse Public License"
-            :url "http://www.eclipse.org/legal/epl-v10.html"}
+(defproject om-next-cross-platform/lein-template "0.0.1-SNAPSHOT"
+  :description "lein-template for writing cross platform Om-Next components for the browser and for mobile devices using React Native"
+  :url "https://github.com/artemyarulin/om-next-cross-platform-template"
+  :license {:name "MIT License"
+            :url "http://opensource.org/licenses/MIT"}
   :eval-in-leiningen true)
