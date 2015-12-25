@@ -4,11 +4,15 @@
 
 (def render (renderer "om-next-cross-platform"))
 
-(defn om-next-cross-platform
-  "FIXME: write documentation"
-  [name]
+(defn om-next-cross-platform [name]
   (let [data {:name name
               :sanitized (name-to-path name)}]
     (main/info "Generating fresh 'lein new' om-next-cross-platform project.")
     (->files data
-             ["src/{{sanitized}}/foo.clj" (render "foo.clj" data)])))
+             ["README.md" (render "README.md" data)]
+             ["project.clj" (render "project.clj" data)]
+             ["src/{{name}}/core.cljs" (render "core.cljs" data)]
+             ["src/react/dom.cljs" (render "dom.cljs" data)]
+             ["src/react/react.cljs" (render "react.cljs" data)]
+             ["src/repl/repl.cljs" (render "repl.cljs" data)]
+             ["resources/public/index.html" (render "index.html" data)])))
