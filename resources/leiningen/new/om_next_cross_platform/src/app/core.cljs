@@ -3,22 +3,19 @@
             [om.dom :as dom]
             [ktoa.core :as ktoa :refer [view text text-input]]))
 
-(def status "AppHELLO")
+(def status "Hello cross-platform world!")
 
 (defn render-mobile []
   (view nil
-        (text nil "Normal text2")
-        (text-input {:style {:height 40 :width 200 :borderWidth 2}
-                     :value status}
-                    nil)))
+        (text nil "Mobile:")
+        (text nil status)))
 
 (defn render-browser []
   (dom/div nil
-           (dom/div nil "ITasda")
-           (dom/div nil "ISsa")
+           (dom/div nil "Browser:")
            (dom/div nil status)))
 
-(defui RootViewRN
+(defui RootComponent
   Object
   (render [this]
           (if ktoa/react-native?
@@ -27,6 +24,6 @@
 
 (ktoa/register! "RootViewRN"
                 #(om/add-root! (om/reconciler ktoa/om-options)
-                               RootViewRN
+                               RootComponent
                                %)
                 #(.querySelector js/document "#app"))

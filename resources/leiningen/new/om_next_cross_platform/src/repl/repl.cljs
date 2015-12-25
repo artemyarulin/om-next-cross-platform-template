@@ -1,6 +1,6 @@
 (ns repl.repl
   (:require [ktoa.repl :refer [start-repl]]))
 
-(start-repl {:app-name "RootViewRN"
+(start-repl {:app-name "{{name}}"
              :base-url "http://localhost:3449/js"
-             :root-ns  "app.core"})
+             :root-ns  "{{name}}.core"})
