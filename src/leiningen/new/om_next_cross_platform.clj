@@ -1,12 +1,14 @@
 (ns leiningen.new.om-next-cross-platform
   (:require [leiningen.new.templates :refer [renderer name-to-path ->files]]
-            [leiningen.core.main :as main]))
+            [leiningen.core.main :as main]
+            [clojure.string :refer [capitalize]]))
 
 (def render (renderer "om-next-cross-platform"))
 
 (defn om-next-cross-platform [name]
   (let [data {:name name
-              :sanitized (name-to-path name)}]
+              :sanitized (name-to-path name)
+              :app-name (str (capitalize name) "App")}]
     (main/info "Generating fresh 'lein new' om-next-cross-platform project.")
     (->files data
              ["README.md" (render "README.md" data)]
