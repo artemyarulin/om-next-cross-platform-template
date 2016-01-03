@@ -7,6 +7,7 @@
                  [ktoa "0.1.1-SNAPSHOT"]]
   :plugins [[lein-cljsbuild "1.1.1"]
             [lein-figwheel "0.5.0-1"]]
+  :clean-targets ^{:protect false} ["{{app-name}}/index.ios.js"]
   :source-paths ["src"]
   :repl-options {:nrepl-middleware [cemerick.piggieback/wrap-cljs-repl]
                  :init (do (use 'figwheel-sidecar.repl-api)(start-figwheel!))}
