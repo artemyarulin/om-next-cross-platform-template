@@ -46,7 +46,11 @@ cd QwertyApp && react-native run-android
 lein clean && lein cljsbuild once repl && lein repl
 ```
 
-For Android version we cannot use `localhost` as it points to the actual device. Set in a project.clj `:figwheel :websocket-host` to the right IP (external or according to [this stackoverflow question](http://stackoverflow.com/questions/5806220/how-to-connect-to-my-http-localhost-web-server-from-android-emulator-in-eclips)) and then do the same for `src/repl/repl.cljs` for the `:base-url` (don't forget to recompile `lein clean && lein cljsbuild build once repl`). See this [issue](https://github.com/artemyarulin/om-next-cross-platform-template/issues/4) for more info
+By default only `index.ios.js` will be generated only. Change `:output-to` for `:repl` build to `AppName/index.android.js`. For cross platform development change native apps to look to the same JS file location.
+
+For Android version we cannot use `localhost` as it points to the actual device. Set in a project.clj `:figwheel :websocket-host` to the right IP (external or according to [this stackoverflow question](http://stackoverflow.com/questions/5806220/how-to-connect-to-my-http-localhost-web-server-from-android-emulator-in-eclips)) and then do the same for `src/repl/repl.cljs` for the `:base-url` (don't forget to recompile `lein clean && lein cljsbuild build once repl`). See this [issue](https://github.com/artemyarulin/om-next-cross-platform-template/issues/4) for more info.
+
+For browser development just open `http://localhost:3449`
 
 #### Development
 
