@@ -1,4 +1,4 @@
-(defproject {{name}}
+(defproject {{name}} "0.0.1"
   :dependencies [[org.clojure/clojure "1.7.0"]
                  [org.clojure/clojurescript "1.7.189"]
                  [org.omcljs/om "1.0.0-alpha25"]
@@ -15,11 +15,12 @@
                       :cljsbuild {:builds {:release {:source-paths ["src/react"]}}}}}
   :cljsbuild {:builds {:repl {:source-paths ["src/repl" ]
                               :compiler {:optimizations :advanced
-                                         :output-to "ios/js/{{name}}.js"}}
-                       :dev {:source-paths ["src/app" ]
-                             :figwheel true
+                                         :output-to "{{name}}/index.ios.js"}}
+                       :dev {:source-paths ["src/{{name}}" ]
+                             :figwheel {:websocket-host "localhost"}
                              :compiler {:main {{name}}.core
+                                        :asset-path "js"
                                         :output-dir "resources/public/js"}}
-                       :release {:source-paths ["src/app"]
+                       :release {:source-paths ["src/{{name}}"]
                                  :compiler {:optimizations :advanced
-                                            :output-to "ios/js/{{name}}.js"}}}})
+                                            :output-to "{{name}}/index-relase.ios.js"}}}})
