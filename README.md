@@ -46,6 +46,8 @@ cd QwertyApp && react-native run-android
 lein clean && lein cljsbuild once repl && lein repl
 ```
 
+For Android version we cannot use `localhost` as it points to the actual device. Set in a project.clj `:figwheel :websocket-host` to the right IP (external or according to [this stackoverflow question](http://stackoverflow.com/questions/5806220/how-to-connect-to-my-http-localhost-web-server-from-android-emulator-in-eclips)) and then do the same for `src/repl/repl.cljs` for the `:base-url`. See this [issue](https://github.com/artemyarulin/om-next-cross-platform-template/issues/4) for more info
+
 #### Development
 
 You only need to run `lein cljsbuild once repl` in case `src\repl.cljs` has changed. In other cases `lein repl` + open mobile project is enough
