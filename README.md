@@ -36,12 +36,14 @@ Be sure that all needed react native tools installed. See [getting started](http
 ``` bash
 lein new om-next-cross-platform qwerty && cd qwerty
 react-native init QwertyApp
-lein cljsbuild once repl && lein repl
 
-# Run the native app, see RN docs
+# Run the native app
 open QwertyApp/ios/QwertyApp.xcodeproj
 # or
 cd QwertyApp && react-native run-android
+
+# Then compile and start the repl
+lein clean && lein cljsbuild once repl && lein repl
 ```
 
 #### Development
