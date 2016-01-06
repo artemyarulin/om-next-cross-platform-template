@@ -9,6 +9,7 @@
             [lein-figwheel "0.5.0-1"]]
   :clean-targets ^{:protect false} ["{{app-name}}/index.ios.js"]
   :source-paths ["src"]
+  :figwheel {:ring-handler ktoa.state/handler}
   :repl-options {:nrepl-middleware [cemerick.piggieback/wrap-cljs-repl]
                  :init (do (use 'figwheel-sidecar.repl-api)(start-figwheel!))}
   :profiles {:mobile {:dependencies [[org.omcljs/om "1.0.0-alpha28" :exclusions [cljsjs/react cljsjs/react-dom]]]
