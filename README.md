@@ -46,7 +46,7 @@ cd QwertyApp && react-native run-android
 lein clean && lein cljsbuild once repl && lein repl
 ```
 
-By default only `index.ios.js` will be generated. For Android development change `:output-to` for `:repl` build to `AppName/index.android.js`. For cross platform development change native apps to look for the same JS file location like `AppName/index.js`
+By default only `index.ios.js` will be generated. For Android development change `:output-to` for `:repl` build to `AppName/index.android.js`. For cross platform development change Android app to look for iOS output file, more info [here](https://github.com/kapteko/kapteko-frontend/issues/6)
 
 For Android version we cannot use `localhost` to connect to Figwheel as it points to the actual device. You can resolve it by running `adb reverse tcp:3449 tcp:3449`
 
