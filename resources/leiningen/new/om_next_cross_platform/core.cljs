@@ -3,19 +3,18 @@
             [om.dom :as dom]
             [ktoa.components :refer [view text]]
             [ktoa.core :as ktoa]
-            [ktoa.om :as ktoa-om]))
-
-(def status "Hello cross-platform world!")
+            [ktoa.om :as ktoa-om]
+            [{{name}}.state :refer [app-state]]))
 
 (defn render-mobile []
   (view nil
         (text nil "Mobile:")
-        (text nil status)))
+        (text nil (:msg app-state))))
 
 (defn render-browser []
   (dom/div nil
            (dom/div nil "Browser:")
-           (dom/div nil status)))
+           (dom/div nil (:msg app-state))))
 
 (defui RootComponent
   Object

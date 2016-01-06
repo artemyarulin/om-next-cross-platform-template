@@ -14,6 +14,7 @@
              ["README.md" (render "README.md" data)]
              ["project.clj" (render "project.clj" data)]
              ["src/{{name}}/core.cljs" (render "core.cljs" data)]
+             ["src/{{name}}/state.cljs" (render "state.cljs" data)]
              ["src/react/dom.cljs" (render "dom.cljs" data)]
              ["src/react/react.cljs" (render "react.cljs" data)]
              ["src/repl/repl.cljs" (render "repl.cljs" data)]

@@ -1,3 +1,6 @@
-(ns {{name}}.state}}
+(ns {{name}}.state
+    (:require [ktoa.state :as ktoa :refer-macros [persist]]))
 
-(def app-state (atom {}))
+(defonce app-state (atom {:msg "Hello cross-platform world!"}))
+
+(persist app-state)

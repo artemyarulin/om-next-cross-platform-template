@@ -9,8 +9,8 @@ lein-template for writing cross platform Om-Next components for the browser and 
 - iOS and Android support
 - Transparent integration with React Native: No need to make any **any** modifications in your RN application
 - Release build with advanced compilation mode supported - makes JS bundles 4 times smaller
+- Sync state between clients in real time with just a few line of changes
 - No magic hacks
-- Experimental: Sync state between clients in real time with just a few line of changes
 
 ### Status
 

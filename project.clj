@@ -1,4 +1,4 @@
-(defproject om-next-cross-platform/lein-template "0.1.6"
+(defproject om-next-cross-platform/lein-template "0.1.7"
   :description "lein-template for writing cross platform Om-Next components for the browser and for mobile devices using React Native"
   :url "https://github.com/artemyarulin/om-next-cross-platform-template"
   :license {:name "MIT License"

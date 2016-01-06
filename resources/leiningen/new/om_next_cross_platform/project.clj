@@ -4,7 +4,7 @@
                  [org.omcljs/om "1.0.0-alpha28"]
                  [figwheel-sidecar "0.5.0-SNAPSHOT"]
                  [com.cemerick/piggieback "0.2.1"]
-                 [ktoa "0.1.1-SNAPSHOT"]]
+                 [ktoa "0.1.2-SNAPSHOT"]]
   :plugins [[lein-cljsbuild "1.1.1"]
             [lein-figwheel "0.5.0-1"]]
   :clean-targets ^{:protect false} ["{{app-name}}/index.ios.js"]
