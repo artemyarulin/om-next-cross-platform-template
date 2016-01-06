@@ -61,6 +61,10 @@ You only need to run `lein cljsbuild once repl` in case `src\repl.cljs` has chan
 - `lein with-profile mobile cljsbuild once release` - to genereate release build. Make sure that you have needed externs, or disable `advanced` optimization
 - `cd QwertyApp && react-native bundle --entry-file release.js --bundle-output ios/js/main.jsbundle --platform ios` - to generate release bundle. Do the same for Android version
 
+#### References
+
+This project havily relies on [ktoa](https://github.com/artemyarulin/ktoa). If you are looing for example project which uses this project - have a look on [kapteko-frontend](https://github.com/kapteko/kapteko-frontend)
+
 #### FAQ
 
 See [wiki](https://github.com/artemyarulin/om-next-cross-platform-template/wiki)
