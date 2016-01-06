@@ -9,12 +9,12 @@
 (defn render-mobile []
   (view nil
         (text nil "Mobile:")
-        (text nil (:msg app-state))))
+        (text nil (:msg @app-state))))
 
 (defn render-browser []
   (dom/div nil
            (dom/div nil "Browser:")
-           (dom/div nil (:msg app-state))))
+           (dom/div nil (:msg @app-state))))
 
 (defui RootComponent
   Object
