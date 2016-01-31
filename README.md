@@ -63,7 +63,7 @@ You only need to run `lein cljsbuild once repl` in case `src\repl.cljs` has chan
 
 #### References
 
-This project havily relies on [ktoa](https://github.com/artemyarulin/ktoa). If you are looing for example project which uses this project - have a look on [kapteko-frontend](https://github.com/kapteko/kapteko-frontend)
+This project havily relies on [ktoa](https://github.com/artemyarulin/ktoa)
 
 #### FAQ
 
